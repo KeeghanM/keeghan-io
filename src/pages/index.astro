@@ -370,6 +370,7 @@ import Layout from '../layouts/Layout.astro'
   .icon svg {
     height: 100%;
     width: 100%;
+    filter: drop-shadow(0 0 10px var(--startCol));
   }
   .scroller {
     transition: opacity 500ms ease-in;
@@ -421,11 +422,12 @@ import Layout from '../layouts/Layout.astro'
   }
   button::after {
     content: '';
-    box-shadow: 0 0 30px 0px var(--endCol);
+    box-shadow: 0 0 20px 0px var(--endCol);
     opacity: 0;
     transition: opacity 300ms ease-in;
     position: absolute;
     inset: 0;
+    border-radius: inherit;
   }
   button:hover::after {
     opacity: 1;
