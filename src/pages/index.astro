@@ -81,7 +81,7 @@ import Layout from '../layouts/Layout.astro'
   <Section
     title="Projects"
     colorStart="blue"
-    colorEnd="yellow"
+    colorEnd="green"
     icon="mdi:book"
     scroller={true}
     anchor="projects"
@@ -118,9 +118,21 @@ import Layout from '../layouts/Layout.astro'
     scroller={true}
     anchor="talks"
   >
-    <p>Coming Soon...</p>
+    <div class="flow">
+      <p>
+        While this section may be empty for now, it represents an exciting
+        frontier that I'm eagerly exploring. I have a strong desire to connect
+        with like-minded individuals, industry professionals, and technology
+        enthusiasts through speaking engagements, conferences, and events.
+      </p><p>
+        Stay tuned as this space will soon be filled with updates on upcoming
+        talks, workshops, and conferences where you can catch me sharing my
+        expertise on various topics, ranging from technology trends and business
+        strategies to the convergence of AI and everyday life. Together, let's
+        embark on a journey of learning, collaboration, and inspiration.
+      </p>
+    </div>
   </Section>
-
   <Section
     title="Get In Touch"
     colorStart="red"
@@ -171,7 +183,7 @@ import Layout from '../layouts/Layout.astro'
     content: '';
     box-shadow: 0 0 20px 0px var(--endCol);
     opacity: 0;
-    transition: opacity 300ms ease-in;
+    transition: opacity 300ms ease-out;
     position: absolute;
     inset: 0;
     border-radius: inherit;
