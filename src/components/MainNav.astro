@@ -110,6 +110,7 @@
   nav {
     position: fixed;
     width: 100vw;
+    z-index: 10;
   }
   ul {
     position: relative;
@@ -133,9 +134,21 @@
     justify-content: center;
     gap: -1rem;
   }
-  li:hover {
-    color: #c738c7;
+  li {
+    position: relative;
   }
+  li::after {
+    content: '';
+    background: radial-gradient(rgba(199, 56, 199, 0.4), transparent);
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+  }
+  li:hover::after {
+    opacity: 1;
+  }
+
   .icon {
     width: 2rem;
   }

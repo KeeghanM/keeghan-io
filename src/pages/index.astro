@@ -162,6 +162,7 @@ import Layout from '../layouts/Layout.astro'
         <div class="project">Coming Soon...</div>
         <div class="project">Coming Soon...</div>
       </div>
+      <button>Load More...</button>
     </div>
   </div>
   <div
@@ -334,7 +335,6 @@ import Layout from '../layouts/Layout.astro'
   .section {
     --startCol: #eb3a02;
     --endCol: #c738c7;
-    z-index: -1;
     display: flex;
     gap: 0.5rem;
     width: min(100% - 3rem, 1024px);
@@ -415,8 +415,22 @@ import Layout from '../layouts/Layout.astro'
     width: fit-content;
     padding: 1rem 2rem;
     border-radius: 10px;
-    border: 1px solid yellow;
+    border: 1px solid var(--endCol);
+    cursor: pointer;
+    position: relative;
   }
+  button::after {
+    content: '';
+    box-shadow: 0 0 30px 0px var(--endCol);
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+    position: absolute;
+    inset: 0;
+  }
+  button:hover::after {
+    opacity: 1;
+  }
+
   input,
   textarea {
     padding: 0.6rem;
