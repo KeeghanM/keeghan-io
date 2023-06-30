@@ -1,42 +1,22 @@
 ---
+import ContactForm from '../components/ContactForm.astro'
+import Hero from '../components/home/Hero.astro'
+import Section from '../components/home/Section.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Keeghan McGarry - Digital Portfolio">
-  <div class="hero">
-    <div class="title">
-      <h1>Keeghan McGarry</h1>
-      <h3>Tech • Product • Business • AI • Passion</h3>
-    </div>
-  </div>
-  <div
-    class="section intro"
-    data-color-start="#eb3a02"
-    data-color-end="#c738c7"
+  <Hero />
+
+  <Section
+    title="Introduction"
+    colorStart="#eb3a02"
+    colorEnd="#c738c7"
+    icon="mdi:book"
+    scroller={true}
+    anchor="intro"
   >
-    <div class="side">
-      <div class="icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          ><path
-            fill="currentColor"
-            d="M6.13 2.793A3.91 3.91 0 0 1 8.5 2a1.757 1.757 0 0 1 1.5.78A1.757 1.757 0 0 1 11.5 2a3.91 3.91 0 0 1 2.37.793c.525.408.93.973 1.073 1.656c.328.025.628.161.88.366c.382.31.66.775.835 1.267c.274.765.348 1.74.064 2.57c.072.034.143.074.212.12c.275.183.484.445.638.754c.303.605.428 1.449.428 2.474c0 1.141-.435 1.907-.987 2.38a2.68 2.68 0 0 1-1.054.555c-.1.558-.38 1.204-.819 1.752c-.57.715-1.454 1.313-2.64 1.313c-.94 0-1.688-.52-2.174-1.03a4.252 4.252 0 0 1-.326-.385a4.245 4.245 0 0 1-.326.385C9.188 17.48 8.441 18 7.5 18c-1.186 0-2.069-.598-2.64-1.313a4.057 4.057 0 0 1-.819-1.752a2.68 2.68 0 0 1-1.054-.555C2.435 13.907 2 13.14 2 12c0-1.025.126-1.87.428-2.474a1.92 1.92 0 0 1 .638-.755a1.58 1.58 0 0 1 .212-.118c-.284-.832-.21-1.806.064-2.571c.175-.492.453-.957.835-1.267c.252-.205.552-.34.88-.366c.144-.683.549-1.248 1.074-1.656ZM9.5 4.5v-.01l-.002-.05a2.744 2.744 0 0 0-.154-.764a1.222 1.222 0 0 0-.309-.49A.76.76 0 0 0 8.5 3a2.91 2.91 0 0 0-1.756.582C6.28 3.943 6 4.432 6 5a.5.5 0 0 1-.658.474c-.188-.062-.356-.027-.535.117c-.196.16-.387.444-.524.827c-.279.782-.25 1.729.133 2.305A.5.5 0 0 1 4.5 9h.75a2.25 2.25 0 0 1 2.25 2.25v.335a1.5 1.5 0 1 1-1 0v-.335c0-.69-.56-1.25-1.25-1.25H3.5a.499.499 0 0 1-.175-.032l-.003.006C3.124 10.369 3 11.025 3 12c0 .859.315 1.343.638 1.62c.347.298.732.38.862.38a.5.5 0 0 1 .5.5c0 .368.2 1.011.64 1.563c.429.535 1.046.937 1.86.937c.56 0 1.062-.313 1.45-.72c.191-.2.34-.407.437-.577a1.573 1.573 0 0 0 .113-.236V7.5H8.415a1.5 1.5 0 1 1 0-1H9.5v-2Zm1 9.999v.967a1.575 1.575 0 0 0 .113.236c.098.17.246.377.436.577c.389.407.892.72 1.451.72c.814 0 1.431-.402 1.86-.937c.44-.552.64-1.195.64-1.563a.5.5 0 0 1 .5-.5c.13 0 .515-.082.862-.38c.323-.277.638-.761.638-1.62c0-.975-.125-1.63-.322-2.026a.923.923 0 0 0-.3-.37A.657.657 0 0 0 16 9.5a.5.5 0 0 1-.416-.777c.384-.576.412-1.523.133-2.305c-.137-.383-.328-.668-.524-.827c-.179-.144-.347-.18-.535-.117A.5.5 0 0 1 14 5c0-.568-.28-1.057-.745-1.418A2.91 2.91 0 0 0 11.5 3a.76.76 0 0 0-.535.186a1.22 1.22 0 0 0-.31.49a2.579 2.579 0 0 0-.155.814v9.01h.75c.69 0 1.25-.56 1.25-1.25v-1.835a1.5 1.5 0 1 1 1 0v1.835a2.25 2.25 0 0 1-2.25 2.25h-.75ZM6.5 7a.5.5 0 1 0 1 0a.5.5 0 0 0-1 0ZM13 9.5a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1Zm-6 3a.5.5 0 1 0 0 1a.5.5 0 0 0 0-1Z"
-          ></path></svg
-        >
-      </div>
-      <div class="bar"></div>
-    </div>
-    <div class="content">
-      <h2>
-        <a
-          class="anchor"
-          id="intro"
-        ></a>
-        Introduction
-      </h2>
+    <div class="flow">
       <p>
         What is this space? It's not just a portfolio. It's a collection of my
         adventures in technology, a testament to my continuous learning and
@@ -51,34 +31,16 @@ import Layout from '../layouts/Layout.astro'
         dive into this exciting world of technology together!
       </p>
     </div>
-  </div>
-  <div
-    class="section scroller"
-    data-color-start="#c738c7"
-    data-color-end="blue"
+  </Section>
+  <Section
+    title="Who Am I?"
+    colorStart="#c738c7"
+    colorEnd="blue"
+    icon="mdi:book"
+    scroller={true}
+    anchor="who"
   >
-    <div class="side">
-      <div class="icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          ><path
-            fill="currentColor"
-            d="M8 7a2 2 0 1 1 4 0a2 2 0 0 1-4 0Zm-.5 3h5a1.5 1.5 0 0 1 1.5 1.5c0 1.116-.459 2.01-1.212 2.615c-.741.595-1.735.885-2.788.885c-1.053 0-2.047-.29-2.788-.885C6.46 13.51 6 12.616 6 11.5A1.5 1.5 0 0 1 7.5 10ZM10 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16Zm-7 8a7 7 0 1 1 14 0a7 7 0 0 1-14 0Z"
-          ></path></svg
-        >
-      </div>
-      <div class="bar"></div>
-    </div>
-    <div class="content">
-      <h2>
-        <a
-          class="anchor"
-          id="who"
-        ></a>Who am I?
-      </h2>
+    <div class="flow">
       <p>
         I'm Keeghan McGarry, a New Zealand native now calling Liverpool, England
         home. I’m a tech enthusiast, chess competitor, and the mastermind behind
@@ -114,34 +76,17 @@ import Layout from '../layouts/Layout.astro'
         for the next adventure. Let’s see where the journey takes us!!
       </p>
     </div>
-  </div>
-  <div
-    class="section scroller"
-    data-color-start="blue"
-    data-color-end="green"
+  </Section>
+
+  <Section
+    title="Projects"
+    colorStart="blue"
+    colorEnd="yellow"
+    icon="mdi:book"
+    scroller={true}
+    anchor="projects"
   >
-    <div class="side">
-      <div class="icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          ><path
-            fill="currentColor"
-            d="M10 2c2.817 0 4.415 1.923 4.647 4.246h.07C16.532 6.246 18 7.758 18 9.623c0 .095-.004.19-.011.283a5.782 5.782 0 0 0-1.114-1.062c-.31-.933-1.163-1.598-2.157-1.598h-.071a1 1 0 0 1-.995-.9C13.45 4.325 12.109 3 10 3C7.886 3 6.551 4.316 6.348 6.345a1 1 0 0 1-.995.901h-.07C4.027 7.246 3 8.304 3 9.623C3 10.943 4.028 12 5.282 12h2.666a5.733 5.733 0 0 0-.177 1H5.282C3.469 13 2 11.488 2 9.623C2 7.82 3.373 6.347 5.102 6.251l.251-.005C5.587 3.908 7.183 2 10 2Zm8 11.5a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm-2.854-1.854L12.5 14.293l-.646-.647a.5.5 0 0 0-.708.708l1 1a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708Z"
-          ></path></svg
-        >
-      </div>
-      <div class="bar"></div>
-    </div>
-    <div class="content">
-      <h2>
-        <a
-          class="anchor"
-          id="projects"
-        ></a>Projects
-      </h2>
+    <div class="flow">
       <p>
         Welcome to my sandbox, a playground where curiosity meets code! This is
         where I let my ideas run wild, bringing together passions, experiments,
@@ -164,108 +109,28 @@ import Layout from '../layouts/Layout.astro'
       </div>
       <button>Load More...</button>
     </div>
-  </div>
-  <div
-    class="section scroller"
-    data-color-start="green"
-    data-color-end="red"
+  </Section>
+  <Section
+    title="Talks & Events"
+    colorStart="green"
+    colorEnd="red"
+    icon="mdi:book"
+    scroller={true}
+    anchor="talks"
   >
-    <div class="side">
-      <div class="icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          ><path
-            fill="currentColor"
-            d="M9.999 6a2 2 0 1 0 0-4a2 2 0 0 0 0 4Zm0-1a1 1 0 1 1 0-2a1 1 0 0 1 0 2Zm-1.5 3a.5.5 0 0 0-.5.5V9h-1v-.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5V9h-1v-.5a.5.5 0 0 0-.5-.5h-3Zm-1.5 6.784V16.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-1.716a.5.5 0 0 1 .153-.36l3.703-3.564a.5.5 0 0 0-.347-.86H3.49a.5.5 0 0 0-.346.86l3.702 3.564a.5.5 0 0 1 .154.36Zm1 1.716v-1.716a1.5 1.5 0 0 0-.46-1.08L4.729 11h10.538l-2.808 2.703a1.5 1.5 0 0 0-.46 1.081V16.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5Z"
-          ></path></svg
-        >
-      </div>
-      <div class="bar"></div>
-    </div>
-    <div class="content">
-      <h2>
-        <a
-          class="anchor"
-          id="talks"
-        ></a>Talks & Events
-      </h2>
-      <p>Coming soon...</p>
-    </div>
-  </div>
-  <div
-    class="section scroller"
-    data-color-start="red"
-    data-color-end="yellow"
-  >
-    <div class="side">
-      <div class="icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          ><path
-            fill="currentColor"
-            d="M1.177 1.119a.5.5 0 0 1 .547-.066l13 6.5a.5.5 0 0 1 0 .894l-13 6.5a.5.5 0 0 1-.702-.594L2.977 8L1.022 1.647a.5.5 0 0 1 .155-.528ZM3.869 8.5l-1.547 5.03L13.382 8L2.322 2.47L3.869 7.5H9.5a.5.5 0 0 1 0 1H3.87Z"
-          ></path></svg
-        >
-      </div>
-      <div class="bar"></div>
-    </div>
-    <div class="content">
-      <h2>
-        <a
-          class="anchor"
-          id="contact"
-        ></a>Get In Touch
-      </h2>
-      <form
-        action="https://api.web3forms.com/submit"
-        method="POST"
-      >
-        <input
-          type="hidden"
-          name="access_key"
-          value="11e26c32-e78c-43f8-8ea2-0e500c47926b"
-        />
+    <p>Coming Soon...</p>
+  </Section>
 
-        <fieldset>
-          <label for="name">Your Name:</label>
-          <input
-            type="text"
-            name="name"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <label for="email">Your Email:</label>
-          <input
-            type="email"
-            name="email"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <label for="message">Your Message:</label>
-          <textarea
-            name="message"
-            required
-          ></textarea>
-        </fieldset>
-        <fieldset>
-          <div
-            class="h-captcha"
-            data-captcha="true"
-          >
-          </div>
-          <button type="submit">Send</button>
-        </fieldset>
-      </form>
-    </div>
-  </div>
+  <Section
+    title="Get In Touch"
+    colorStart="red"
+    colorEnd="yellow"
+    icon="mdi:book"
+    scroller={true}
+    anchor="contact"
+  >
+    <ContactForm />
+  </Section>
 </Layout>
 
 <script
@@ -274,110 +139,11 @@ import Layout from '../layouts/Layout.astro'
   defer
 ></script>
 
-<script>
-  document.querySelectorAll('.section').forEach((elem) => {
-    const startCol = elem.dataset.colorStart
-    const endCol = elem.dataset.colorEnd
-    elem.style.setProperty('--startCol', startCol)
-    elem.style.setProperty('--endCol', endCol)
-  })
-
-  const scrollers = document.querySelectorAll('.scroller')
-  scrollers.forEach((elem) => {
-    elem.style.opacity = 0
-  })
-  const elementInView = (elem, scrollOffset = 0) => {
-    const elementTop = elem.getBoundingClientRect().top
-    return (
-      elementTop <=
-      (window.innerHeight || document.documentElement.clientHeight) -
-        scrollOffset
-    )
-  }
-  const displayScrollElement = (elem) => {
-    elem.style.opacity = 1
-  }
-  const hideScrollElement = (elem) => {
-    elem.style.opacity = 0
-  }
-  const handleScrollAnimation = () => {
-    scrollers.forEach((elem) => {
-      if (elementInView(elem, 200)) {
-        displayScrollElement(elem)
-      } else {
-        hideScrollElement(elem)
-      }
-    })
-  }
-  window.addEventListener('scroll', () => {
-    handleScrollAnimation()
-  })
-</script>
-
 <style>
-  .hero {
-    height: 70vh;
-    display: grid;
-    place-items: center;
-    background: radial-gradient(rgba(255, 0, 255, 0.2), transparent);
-  }
-  .hero .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero .title h1 {
-    color: #eb3a02;
-  }
   .intro {
     min-height: 30vh;
   }
-  .section {
-    --startCol: #eb3a02;
-    --endCol: #c738c7;
-    display: flex;
-    gap: 0.5rem;
-    width: min(100% - 3rem, 1024px);
-    margin-inline: auto;
-    position: relative;
-  }
-  .content {
-    padding-bottom: 3rem;
-    width: 80ch;
-  }
-  .content h2 {
-    color: var(--startCol);
-  }
-  .content > * + * {
-    margin-top: 1em;
-  }
-  .side {
-    display: flex;
-    flex-direction: column;
-    width: 4rem;
-    align-items: center;
-  }
-  .bar {
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(var(--startCol), var(--endCol));
-  }
-  .icon {
-    color: var(--startCol);
-    width: 3rem;
-    height: 3rem;
-  }
-  .icon svg {
-    height: 100%;
-    width: 100%;
-    filter: drop-shadow(0 0 10px var(--startCol));
-  }
-  .scroller {
-    transition: opacity 500ms ease-in;
-  }
-  .scroller.scrolled {
-    opacity: 1;
-  }
+
   .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -390,25 +156,6 @@ import Layout from '../layouts/Layout.astro'
     border-radius: 10px;
     display: grid;
     place-items: center;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    max-width: 450px;
-  }
-  fieldset {
-    outline: none;
-    border: none;
-    display: flex;
-    flex-direction: column;
-  }
-  textarea {
-    height: 150px;
   }
   button {
     background: black;
@@ -431,17 +178,5 @@ import Layout from '../layouts/Layout.astro'
   }
   button:hover::after {
     opacity: 1;
-  }
-
-  input,
-  textarea {
-    padding: 0.6rem;
-  }
-
-  a.anchor {
-    display: block;
-    position: relative;
-    top: -120px;
-    visibility: hidden;
   }
 </style>

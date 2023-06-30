@@ -1,0 +1,94 @@
+---
+---
+
+<form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+  <input
+    type="hidden"
+    name="access_key"
+    value="11e26c32-e78c-43f8-8ea2-0e500c47926b"
+  />
+
+  <fieldset>
+    <label for="name">Your Name:</label>
+    <input
+      type="text"
+      name="name"
+      required
+    />
+  </fieldset>
+  <fieldset>
+    <label for="email">Your Email:</label>
+    <input
+      type="email"
+      name="email"
+      required
+    />
+  </fieldset>
+  <fieldset>
+    <label for="message">Your Message:</label>
+    <textarea
+      name="message"
+      required
+    ></textarea>
+  </fieldset>
+  <fieldset>
+    <div
+      class="h-captcha"
+      data-captcha="true"
+    >
+    </div>
+    <button type="submit">Send</button>
+  </fieldset>
+</form>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+  }
+  fieldset {
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  textarea {
+    height: 150px;
+  }
+
+  input,
+  textarea {
+    padding: 0.6rem;
+  }
+  button {
+    background: black;
+    color: white;
+    width: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--endCol);
+    cursor: pointer;
+    position: relative;
+  }
+  button::after {
+    content: '';
+    box-shadow: 0 0 20px 0px var(--endCol);
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+  button:hover::after {
+    opacity: 1;
+  }
+</style>

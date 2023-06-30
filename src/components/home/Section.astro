@@ -1,0 +1,122 @@
+---
+import { Icon } from 'astro-icon'
+
+interface Props {
+  scroller: boolean
+  colorStart: string
+  colorEnd: string
+  icon: string
+  title: string
+  anchor: string
+}
+
+const { scroller, colorStart, colorEnd, icon, title, anchor } = Astro.props
+---
+
+<div
+  class={'section ' + (scroller ? 'scroller' : '')}
+  data-color-start={colorStart}
+  data-color-end={colorEnd}
+>
+  <div class="side">
+    <div class="icon">
+      <Icon name={icon} />
+    </div>
+    <div class="bar"></div>
+  </div>
+  <div class="content">
+    <h2>
+      <a
+        class="anchor"
+        id={anchor}
+      ></a>{title}
+    </h2>
+    <slot />
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.section').forEach((elem) => {
+    const startCol = elem.dataset.colorStart
+    const endCol = elem.dataset.colorEnd
+    elem.style.setProperty('--startCol', startCol)
+    elem.style.setProperty('--endCol', endCol)
+  })
+
+  const scrollers = document.querySelectorAll('.scroller')
+  scrollers.forEach((elem) => {
+    elem.style.opacity = 0
+  })
+  const elementInView = (elem, scrollOffset = 0) => {
+    const elementTop = elem.getBoundingClientRect().top
+    return (
+      elementTop <=
+      (window.innerHeight || document.documentElement.clientHeight) -
+        scrollOffset
+    )
+  }
+  const displayScrollElement = (elem) => {
+    elem.style.opacity = 1
+  }
+  const hideScrollElement = (elem) => {
+    elem.style.opacity = 0
+  }
+  const handleScrollAnimation = () => {
+    scrollers.forEach((elem) => {
+      if (elementInView(elem, 200)) {
+        displayScrollElement(elem)
+      } else {
+        hideScrollElement(elem)
+      }
+    })
+  }
+  window.addEventListener('scroll', () => {
+    handleScrollAnimation()
+  })
+</script>
+
+<style>
+  .section {
+    --startCol: #eb3a02;
+    --endCol: #c738c7;
+    display: flex;
+    gap: 0.5rem;
+    width: min(100% - 3rem, 1024px);
+    margin-inline: auto;
+    position: relative;
+  }
+  .content {
+    padding-bottom: 3rem;
+    width: 80ch;
+  }
+  .content h2 {
+    color: var(--startCol);
+  }
+  .side {
+    display: flex;
+    flex-direction: column;
+    width: 4rem;
+    align-items: center;
+  }
+  .bar {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(var(--startCol), var(--endCol));
+  }
+  .icon {
+    color: var(--startCol);
+    width: 3rem;
+    height: 3rem;
+  }
+  .icon svg {
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(0 0 10px var(--startCol));
+  }
+  .scroller {
+    transition: opacity 500ms ease-in;
+  }
+  .scroller.scrolled {
+    opacity: 1;
+  }
+</style>
