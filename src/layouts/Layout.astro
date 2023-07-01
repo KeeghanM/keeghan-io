@@ -51,4 +51,15 @@ const { title } = Astro.props
     font-size: 16px;
     line-height: 1.6;
   }
+
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -120px;
+    visibility: hidden;
+  }
+
+  .flow > * + * {
+    margin-top: 1em;
+  }
 </style>
