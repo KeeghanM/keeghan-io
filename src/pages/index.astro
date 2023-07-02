@@ -101,13 +101,7 @@ import Layout from "../layouts/Layout.astro"
         breakthroughs, and the moments when an idea becomes a reality. So, get
         ready to explore - there's a whole world of creation waiting for you!
       </p>
-      <div class="projects">
-        <div class="project">Coming Soon...</div>
-        <div class="project">Coming Soon...</div>
-        <div class="project">Coming Soon...</div>
-        <div class="project">Coming Soon...</div>
-      </div>
-      <button>Load More...</button>
+      <button id="openProjects">See all projects</button>
     </div>
   </Section>
   <Section
@@ -146,24 +140,15 @@ import Layout from "../layouts/Layout.astro"
 </Layout>
 
 <script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+  document.getElementById("openProjects")?.addEventListener("click", () => {
+    window.location.href = "/projects"
+  })
+</script>
 
 <style>
   .intro {
     min-height: 30vh;
-  }
-
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  .project {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    height: 150px;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
   }
   button {
     background: black;

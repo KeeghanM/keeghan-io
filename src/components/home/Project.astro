@@ -1,0 +1,116 @@
+---
+import * as prismic from "@prismicio/client"
+import { Icon } from "astro-icon"
+import techIcons from "../../lib/techIcons"
+
+const { project } = Astro.props
+const uid = project.uid
+const title = project.data.name[0].text
+const url = project.data.website_link.url
+const short_description = project.data.short_description
+const main_content = project.data.main_content
+const creation_date = prismic
+  .asDate(project.data.creation_date)
+  ?.toLocaleDateString()
+const tech_stack = project.data.technologies
+const project_type = project.data.type
+---
+
+<div class="project flow">
+  <h3>
+    <a href={url}>
+      {title}
+      <Icon name="fluent:open-20-regular" />
+    </a>
+  </h3>
+  <div class="labels">
+    <p><span>Project Type:</span> {project_type}</p>
+    <p><span>Built:</span> {creation_date}</p>
+  </div>
+  <p>{short_description}</p>
+  <div class="tech">
+    <h4>Built With:</h4>
+    <div class="stack">
+      {
+        tech_stack.map((tech: { technology: string }) => {
+          const tech_name = tech.technology
+          const icon_string = techIcons[tech_name]
+          return <Icon name={icon_string} />
+        })
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .project {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, var(--startCol), var(--endCol));
+    border-radius: 10px;
+    padding: 1rem;
+    isolation: isolate;
+  }
+  .project::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: black;
+    z-index: -1;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--startCol);
+  }
+  p span {
+    font-weight: bold;
+  }
+  .labels {
+    display: flex;
+    gap: 1rem;
+  }
+
+  [astro-icon] {
+    width: 25px;
+    height: 25px;
+  }
+  .tech {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    padding-top: 0.5rem;
+    width: fit-content;
+    border-radius: 10px;
+  }
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .tech [astro-icon] {
+    width: 50px;
+    height: 50px;
+  }
+  .readMore {
+    color: var(--startCol);
+    border: 1px solid var(--startCol);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+</style>
