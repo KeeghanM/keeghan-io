@@ -2,13 +2,20 @@ const techIcons = {
   "Astro": "logos:astro",
   "TypeScript": "logos:typescript-icon",
   "React": "logos:react",
-  "Next.js": "logos:nextjs-icon",
+  "NextJS": "logos:nextjs",
   "GitHub": "logos:github-icon",
   "Prismic": "logos:prismic-icon",
   "Vercel": "logos:vercel-icon",
   "CSS": "logos:css-3",
-  "Firebase": "logos:firebase",
-  "Planetscale": "logos:planetscale-icon",
+  "FireBase": "logos:firebase",
+  "Planetscale": "skill-icons:planetscale-light",
+  "tailwind": "logos:tailwindcss-icon",
+  "NodeJS": "logos:nodejs-icon",
+  "Oracle": "logos:oracle",
+  "JavaScript": "logos:javascript",
+  "HTML": "logos:html-5",
+  "MySQL": "logos:mysql-icon",
+  "SolidJS": "logos:solidjs-icon",
 }
 
 export default techIcons
