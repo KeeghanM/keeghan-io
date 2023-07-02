@@ -21,17 +21,17 @@ const wip = project.data.wip
       <a href={url}>
         {title}
         <Icon name="fluent:open-20-regular" />
-        {
-          wip && (
-            <img
-              src="https://camo.githubusercontent.com/7f8dab7b0d83bc7e34106e4446800ec6a4bf0413d37170648f5535283ca460dc/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374617475732d576f726b253230696e25323050726f67726573732d79656c6c6f77"
-              alt="Work In Progress"
-              data-canonical-src="https://img.shields.io/badge/Status-Work%20in%20Progress-yellow"
-              style="max-width: 100%;"
-            />
-          )
-        }
       </a>
+      {
+        wip && (
+          <img
+            src="https://camo.githubusercontent.com/7f8dab7b0d83bc7e34106e4446800ec6a4bf0413d37170648f5535283ca460dc/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5374617475732d576f726b253230696e25323050726f67726573732d79656c6c6f77"
+            alt="Work In Progress"
+            data-canonical-src="https://img.shields.io/badge/Status-Work%20in%20Progress-yellow"
+            style="max-width: 100%;"
+          />
+        )
+      }
     </h3>
     <div class="labels">
       <p><span>Project Type:</span> {project_type}</p>
