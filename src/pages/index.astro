@@ -1,8 +1,8 @@
 ---
-import ContactForm from '../components/ContactForm.astro'
-import Hero from '../components/home/Hero.astro'
-import Section from '../components/home/Section.astro'
-import Layout from '../layouts/Layout.astro'
+import ContactForm from "../components/ContactForm.astro"
+import Hero from "../components/home/Hero.astro"
+import Section from "../components/home/Section.astro"
+import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Keeghan McGarry - Digital Portfolio">
@@ -12,8 +12,8 @@ import Layout from '../layouts/Layout.astro'
     title="Introduction"
     colorStart="#eb3a02"
     colorEnd="#c738c7"
-    icon="mdi:book"
-    scroller={true}
+    icon="fluent:brain-circuit-20-regular"
+    scroller={false}
     anchor="intro"
   >
     <div class="flow">
@@ -36,7 +36,7 @@ import Layout from '../layouts/Layout.astro'
     title="Who Am I?"
     colorStart="#c738c7"
     colorEnd="blue"
-    icon="mdi:book"
+    icon="fluent:person-circle-20-regular"
     scroller={true}
     anchor="who"
   >
@@ -82,7 +82,7 @@ import Layout from '../layouts/Layout.astro'
     title="Projects"
     colorStart="blue"
     colorEnd="green"
-    icon="mdi:book"
+    icon="fluent:cloud-checkmark-20-regular"
     scroller={true}
     anchor="projects"
   >
@@ -114,7 +114,7 @@ import Layout from '../layouts/Layout.astro'
     title="Talks & Events"
     colorStart="green"
     colorEnd="red"
-    icon="mdi:book"
+    icon="fluent:presenter-20-regular"
     scroller={true}
     anchor="talks"
   >
@@ -137,7 +137,7 @@ import Layout from '../layouts/Layout.astro'
     title="Get In Touch"
     colorStart="red"
     colorEnd="yellow"
-    icon="mdi:book"
+    icon="fluent:send-20-regular"
     scroller={true}
     anchor="contact"
   >
@@ -145,11 +145,7 @@ import Layout from '../layouts/Layout.astro'
   </Section>
 </Layout>
 
-<script
-  src="https://web3forms.com/client/script.js"
-  async
-  defer
-></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 
 <style>
   .intro {
@@ -180,7 +176,7 @@ import Layout from '../layouts/Layout.astro'
     position: relative;
   }
   button::after {
-    content: '';
+    content: "";
     box-shadow: 0 0 20px 0px var(--endCol);
     opacity: 0;
     transition: opacity 300ms ease-out;
