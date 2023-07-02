@@ -65,6 +65,8 @@ const wip = project.data.wip
     border-radius: 10px;
     isolation: isolate;
     overflow: hidden;
+    max-width: 350px;
+    margin-bottom: 40px;
   }
   .project::before {
     content: "";
@@ -82,7 +84,7 @@ const wip = project.data.wip
     font-size: 1.6rem;
   }
   h4 {
-    color: var(--startCol);
+    color: var(--endCol);
   }
   a {
     display: flex;
@@ -92,7 +94,7 @@ const wip = project.data.wip
     text-decoration: none;
   }
   a:hover {
-    color: var(--startCol);
+    color: #eb3a02;
   }
   p span {
     font-weight: bold;
@@ -114,6 +116,7 @@ const wip = project.data.wip
     width: 100%;
     color: black;
     padding: 1rem;
+    bottom: 0;
   }
   .stack {
     display: flex;

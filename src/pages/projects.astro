@@ -2,44 +2,46 @@
 import Project from "../components/home/Project.astro"
 import client from "../lib/prismic"
 import Layout from "../layouts/Layout.astro"
-import Section from "../components/home/Section.astro"
 
-const projects = await client.getAllByType("project")
+const projects = await client.getAllByType("project", {
+  orderings: {
+    field: "my.project.creation_date",
+    direction: "desc",
+  },
+})
 ---
 
 <Layout title="Keeghan McGarry - Projects">
-  <div class="margin">
-    <Section
-      title="Projects"
-      colorStart="blue"
-      colorEnd="green"
-      icon="fluent:cloud-checkmark-20-regular"
-      scroller={false}
-      anchor="projects"
-    >
-      <div class="projects flow">
-        <p>
-          Welcome to my sandbox, a playground where curiosity meets code! This
-          is where I let my ideas run wild, bringing together passions,
-          experiments, and some pretty nifty tech. From integrating AI into
-          business strategies, to sprinkling a dash of technology into the world
-          of chess and D&D, my personal projects are a testament to my
-          exploration of the tech world.
-        </p><p>
-          Dive in and discover a collection of passion projects and innovative
-          solutions. Each tile you see here tells a story of learning,
-          experimentation, and success. They represent the journey, the
-          breakthroughs, and the moments when an idea becomes a reality. So, get
-          ready to explore - there's a whole world of creation waiting for you!
-        </p>
-        {projects.map((project) => <Project project={project} />)}
-      </div>
-    </Section>
+  <div class="wrapper">
+    <h1>Projects</h1>
+  </div>
+  <div
+    class="projects"
+    data-masonry='{ "itemSelector": ".project", "columnWidth": 350, "gutter": 40, "horizontalOrder": true, "transitionDuration": 0 }'
+  >
+    {projects.map((project) => <Project project={project} />)}
   </div>
 </Layout>
 
+<script>
+  import masonry from "../lib/masonry"
+</script>
+
 <style>
-  .margin {
+  .wrapper {
     padding-top: 150px;
+    max-width: min(100% - 3rem, 80ch);
+    margin-inline: auto;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    color: #eb3a02;
+    font-size: 3rem;
+  }
+  .projects {
+    --startCol: green;
+    --endCol: blue;
+    max-width: min(100% - 3rem, 80vw);
+    margin: auto;
   }
 </style>
