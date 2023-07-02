@@ -16,6 +16,8 @@ const techIcons = {
   "HTML": "logos:html-5",
   "MySQL": "logos:mysql-icon",
   "SolidJS": "logos:solidjs-icon",
+  "p5.js": "p5js",
+  "Grunt": "logos:grunt",
 }
 
 export default techIcons
