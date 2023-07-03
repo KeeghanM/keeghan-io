@@ -9,7 +9,7 @@ const url = project.data.website_link.url
 const short_description = project.data.short_description
 const creation_date = prismic
   .asDate(project.data.creation_date)
-  ?.toLocaleDateString()
+  ?.toLocaleDateString("en-GB")
 const tech_stack = project.data.technologies
 const project_type = project.data.type
 const wip = project.data.wip
