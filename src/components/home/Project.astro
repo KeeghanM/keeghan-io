@@ -33,11 +33,43 @@ const wip = project.data.wip
         )
       }
     </h3>
-    <div class="labels">
-      <p><span>Project Type:</span> {project_type}</p>
-      <p><span>Built:</span> {creation_date}</p>
+    <div class="details">
+      <div class="labels">
+        <p><span>Project Type:</span> {project_type}</p>
+        <p><span>Built:</span> {creation_date}</p>
+      </div>
+      <p>{short_description}</p>
     </div>
-    <p>{short_description}</p>
+    <span
+      class="showMore"
+      onclick="this.parentElement.parentElement.classList.toggle('expanded')"
+      style="cursor: pointer;"
+      >Details <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+          fill="currentColor"
+          d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6l1.41-1.42Z"
+        ></path></svg
+      ></span
+    >
+    <span
+      class="showLess"
+      onclick="this.parentElement.parentElement.classList.toggle('expanded')"
+      style="cursor: pointer;"
+      >Details <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+          fill="currentColor"
+          d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6l1.41 1.41Z"
+        ></path></svg
+      ></span
+    >
   </div>
   <div class="tech">
     <h4>Built With:</h4>
@@ -65,8 +97,9 @@ const wip = project.data.wip
     border-radius: 10px;
     isolation: isolate;
     overflow: hidden;
-    max-width: 350px;
     margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .project::before {
     content: "";
@@ -78,6 +111,9 @@ const wip = project.data.wip
   }
   .content {
     padding: 1rem;
+  }
+  .details {
+    display: none;
   }
 
   h3 {
@@ -109,32 +145,20 @@ const wip = project.data.wip
     height: 25px;
   }
   .tech {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
     background: rgba(255, 255, 255, 0.9);
-    width: 100%;
     color: black;
     padding: 1rem;
+    overflow: hidden;
     bottom: 0;
   }
   .stack {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
   }
   .tech [astro-icon] {
     width: 50px;
     height: 50px;
-  }
-  .readMore {
-    color: var(--startCol);
-    border: 1px solid var(--startCol);
-    border-radius: 5px;
-    width: fit-content;
-    padding: 0.5rem;
-    text-decoration: none;
   }
 
   .tooltip {
@@ -172,5 +196,36 @@ const wip = project.data.wip
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+  }
+
+  .showMore,
+  .expanded .showLess {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  .showMore:hover,
+  .expanded .showLess:hover {
+    color: #eb3a02;
+  }
+
+  .showLess {
+    display: none;
+  }
+  .project.expanded {
+    display: flex;
+    flex-direction: column;
+  }
+  .expanded .stack {
+    flex-wrap: wrap;
+  }
+  .expanded .tech {
+    overflow: auto;
+  }
+  .expanded .details {
+    display: block;
+  }
+  .expanded .showMore {
+    display: none;
   }
 </style>

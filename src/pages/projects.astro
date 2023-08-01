@@ -14,18 +14,24 @@ const projects = await client.getAllByType("project", {
 <Layout title="Keeghan McGarry - Projects">
   <div class="wrapper">
     <h1>Projects</h1>
-  </div>
-  <div
-    class="projects"
-    data-masonry='{ "itemSelector": ".project", "columnWidth": 350, "gutter": 40, "horizontalOrder": true, "transitionDuration": 0 }'
-  >
-    {projects.map((project) => <Project project={project} />)}
+    <div class="projects">
+      <h2>Primary</h2>
+      {
+        projects.map((project) =>
+          project.data.primary ? <Project project={project} /> : null
+        )
+      }
+    </div>
+    <div class="projects">
+      <h2>Secondary</h2>
+      {
+        projects.map((project) =>
+          project.data.primary ? null : <Project project={project} />
+        )
+      }
+    </div>
   </div>
 </Layout>
-
-<script>
-  import masonry from "../lib/masonry"
-</script>
 
 <style>
   .wrapper {
@@ -37,6 +43,10 @@ const projects = await client.getAllByType("project", {
   h1 {
     color: #eb3a02;
     font-size: 3rem;
+  }
+  h2 {
+    color: #eb3a02;
+    font-size: 2rem;
   }
   .projects {
     --startCol: green;
