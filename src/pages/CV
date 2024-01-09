@@ -1,0 +1,215 @@
+---
+---
+
+<div class="header">
+  <div class="container flow">
+    <div class="highlight flow">
+      <h1>Keeghan McGarry</h1>
+      <h2>Tech Leader and Strategist | Driving Business Growth through Technology and Innovation</h2>
+      <ul>
+        <li>📧 <a href="mailto:hello@keeghan.io">hello@keeghan.io</a></li>
+        <li>📞 +44 74 9329 1864</li>
+        <li>📍 Liverpool, United Kingdom</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container flow">
+  <h2>Professional Overview</h2>
+  <p>
+    With over a decade in development, business management, product management, and B2B Sales, I have a proven track record of leading diverse teams and spearheading strategic projects that enhance efficiency, automation, and growth. My approach combines deep technical knowledge with strong leadership and strategic thinking, making a significant impact in every organization I've worked with.
+  </p>
+  <p>
+    As a seasoned public speaker and communicator, I excel in translating complex technical concepts into engaging narratives. Whether presenting to boards, leading workshops, or hosting a podcast, I engage audiences with clarity and insight. My passion for Product and AI is reflected in my regular contributions to my blog at proddr.com, where I share industry advancements and insights.
+  </p>
+  <h2>Experience</h2>
+  <div class="job flow">
+    <div class="job-title highlight">
+      <h3>Technical Product Owner - Vertu Motors Plc.</h3>
+      <p class="date">Aug 2022 - Present</p>
+    </div>
+    <p>
+      I am responsible for overseeing four eCommerce sites, a car leasing website, and a Warehouse Management System (WMS) for Vertu Motors Plc, a leading automotive retailer in the UK. My role involves working closely with cross-functional teams, including developers, designers, and marketers, to ensure that our digital products and systems meet the needs of our customers and deliver business value.
+    </p>
+    <h4>Achievements</h4>
+    <ul>
+      <li>Migrated four bespoke eComm sites to Shopify, reducing operating costs and increasing revenue</li>
+      <li>Implemented a "Customer First" methodolgy to our planning processes, reducing disagreement and increasing quality of releases</li>
+      <li>Defined clear roadmaps for all sites, based on customer insights and business value</li>
+      <li>Introduced structured testing and releases processes, reducing bug counts and customer service costs</li>
+    </ul>
+    <h4>Key Skills</h4>
+    <ul>
+      <li>Agile product management methodologies</li>
+      <li>Conducting customer interviews & surveys</li>
+      <li>Strong leadership and stakeholder management</li>
+      <li>Technical expertise is a largely marketing driven organisation</li>
+    </ul>
+  </div>
+  <div class="job flow">
+    <div class="job-title highlight">
+      <h3>Lead Business Analyst - The Climbing Hangar</h3>
+      <p class="date">Sep 2019 - Aug 2022</p>
+    </div>
+    <p>As a key member of the Senior Management Team at a growing climbing gym company, my role was centered on improving operations and guiding growth. I was responsible for setting the Key Performance Indicators (KPIs) that helped us measure our progress effectively. This approach was crucial as we expanded our staff from 80 to over 200 and doubled our number of gyms.</p>
+    <p>Beyond just managing data, my role involved enhancing our understanding of our customers. I introduced customer profiling and developed innovative reporting tools, revolutionizing how we viewed and interacted with our customers. This 'Customer First' mindset was pivotal in our business growth. I also streamlined our processes, from simplifying how we used our CRM system to conducting regular site audits for continuous improvement. Transitioning our reporting to cloud-based platforms like PowerBI greatly improved decision-making and data accessibility.</p>
+    <h4>Achievements</h4>
+    <ul>
+      <li>Redefined business KPIs to drive improved decision-making and performance</li>
+      <li>Implemented customer profiling, fundamentally changing our customer engagement strategy</li>
+      <li>Developed advanced reporting tools, enhancing business insights and customer understanding</li>
+      <li>Standardized CRM processes for greater efficiency and team consistency</li>
+      <li>Transitioned to cloud-based reporting and analytics, leading to more efficient and accurate data handling</li>
+    </ul>
+    <h4>Key Skills</h4>
+    <ul>
+      <li>Advanced data analysis and visualization, particularly with PowerBI and Salesforce</li>
+      <li>Cloud-based systems management and data warehousing</li>
+      <li>Process documentation and optimization</li>
+      <li>Customer-centric product management and strategic analysis</li>
+      <li>Effective project management and team leadership</li>
+    </ul>
+  </div>
+  <div class="job flow">
+    <div class="job-title highlight">
+      <h3>Technical Manager - Arthur D. Riley & Co.</h3>
+      <p class="date">Mar 2014 - Jul 2017</p>
+    </div>
+    <p>Starting as a Database Administrator and growing into a pivotal role in IT systems management. My initial focus was on designing and maintaining databases for B2B and SaaS platforms, ensuring optimal system performance and reliability. As the company experienced rapid growth, scaling from 150 to over 400 employees, I stepped up to manage all IT infrastructures, which included leading strategic projects such as cloud migration.</p>
+    <p>My responsibilities expanded further during two major company mergers. In collaboration with Delivery and Sales Managers, I played a key role in ensuring the seamless integration of IT systems, maintaining uninterrupted service to our clients. Leading a diverse team, including developers, Database Administrators, and a QA Analyst, I focused on delivering multiple IT projects within set timelines and budgets, directly contributing to our company's operational excellence and client satisfaction.</p>
+    <h4>Achievements</h4>
+    <ul>
+      <li>Developed and launched Parking Enforcement software adopted by over 20 city councils in New Zealand, demonstrating significant product management capability</li>
+      <li>Led a successful cloud migration project, aligning with senior management to prioritize and transition critical systems</li>
+      <li>Played a key role in the seamless integration of IT systems during two company mergers, ensuring continuity and efficiency</li>
+      <li>Conducted regular penetration testing to identify and mitigate potential IT security vulnerabilities</li>
+      <li>Authored over 30 successful tender documents, contributing to new business acquisition and market expansion</li>
+    </ul>
+    <h4>Key Skills</h4>
+    <ul>
+      <li>Strategic planning and execution</li>
+      <li>Product Management</li>
+      <li>Team leadership and management</li>
+      <li>Client relationship management</li>
+      <li>Risk management and mitigation</li>
+    </ul>
+  </div>
+  <h2>Personal Projects</h2>
+  <div class="project">
+    <div class="highlight">
+      <h3><a href="https://chesstraining.app">ChessTraining.app</a></h3>
+      <p class="date">Dec 2021 - Present</p>
+    </div>
+    <p>
+      Built using NextJS during Christmas 2021, and recently re-built ground up during Christmas 2023. ChessTraining.app has over 1000 active members, and features multiple tools including Tactics Trainer and the revolutionary "Natural Play Learning" Course Trainer.
+    </p>
+  </div>
+  <div class="project">
+    <div class="highlight">
+      <h3><a href="https://proddr.com">Proddr.com</a></h3>
+      <p class="date">Jul 2023 - Present</p>
+    </div>
+    <p>
+      Built using SolidJS and Astro. "Your Product Management companion" - Proddr leverages the power of Artificial Intelligence to transform your planning process. With it, fleshing out ideas, refining task descriptions, and anticipating stakeholder questions becomes effortless. Proddr enables a seamless creation of user stories and acceptance criteria, automating and enriching every detail.
+    </p>
+  </div>
+  <div class="project">
+    <div class="highlight">
+      <h3><a href="https://rapidapi.com/KeeghanM/api/chess-puzzles/">Chess Puzzles API</a></h3>
+      <p class="date">Dec 2021 - Present</p>
+    </div>
+    <p>
+      The backend for ChessTraining.app, but also a fully public API to request chess puzzles by rating, theme, length, and a multitude of other factors. Built as a NodeJS server hosted in Oracle cloud and leveraging OracleDB's incredible full text search capabilities. It currently gets >200k requests per month, from ~150 monthly users, 20 of which are subscribed to the paid tier.
+    </p>
+  </div>
+  <h2>Education</h2>
+  <div class="education">
+    <h3>AI for Product Management</h3>
+    <p>Pendo - 2023</p>
+  </div>
+  <div class="education">
+    <h3>Product Analytics Certification</h3>
+    <p>Pendo - 2023</p>
+  </div>
+  <div class="education">
+    <h3>Product-Led Certification</h3>
+    <p>Pendo - 2023</p>
+  </div>
+  <div class="education">
+    <h3>Product Management Basics Certification</h3>
+    <p>Pendo - 2023</p>
+  </div>
+  <div class="education">
+    <h3>Project Management Professional Cert.</h3>
+    <p>LearnSmart - 2017</p>
+  </div>
+  <h2>Personal Statement</h2>
+  <p>Hello, I'm Keeghan McGarry, originally from New Zealand, now enjoying life in Liverpool, England. At heart, I'm a tech enthusiast, chess aficionado, and an imaginative Dungeons & Dragons storyteller. My journey in technology spans over a decade, starting in software engineering and gradually moving to roles where technology meets human interaction.</p>
+  <p>My passion lies in exploring the boundless possibilities of artificial intelligence in business and product management. I believe technology should be as much about understanding people as it is about coding. This belief has guided me through various roles, from nurturing startups with a data-driven approach to creating engaging digital platforms like a chess training website.</p>
+  <p>I'm someone who believes in diving into challenges head-on, embracing both successes and setbacks as opportunities for growth. My career has been a blend of creativity and strategy, finding joy in the intricate dance between the two.</p>
+  <p> In summary, I'm a tech-savvy, chess-loving individual who's always ready for the next adventure, constantly asking big questions and pushing boundaries in the tech world.</p>
+</div>
+
+<style>
+* {
+  padding:0;
+  margin:0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.container {
+  max-width: min(70ch, calc(100vw - 2rem));
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+.flow > *+* {
+  margin-top: 1em;
+}
+.header {
+  background: #e06331;
+  text-align: center;
+  color: white;
+}
+.header h2 {
+  font-style: italic;
+  font-size: 1.2rem !important;
+}
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.highlight {
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.2);
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+}
+.date, .education {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: normal;
+}
+.job ul {
+  margin-left: 1rem;
+  padding-inline: 2rem;
+}
+.job li {
+  font-size: 0.8rem;
+}
+</style>
