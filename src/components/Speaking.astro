@@ -1,0 +1,116 @@
+---
+import { ExternalLink, Mic, Newspaper } from 'lucide-react'
+import { Card, CardContent } from './ui/card'
+
+interface Talk {
+  type: 'talk'
+  title: string
+  event: string
+  location: string
+  date: string
+  description: string
+}
+interface BlogPost {
+  type: 'blog'
+  title: string
+  date: string
+  description: string
+  link: string
+}
+type Card = Talk | BlogPost
+const cards: Card[] = [
+  {
+    type: 'talk',
+    title: 'What Makes Good Feedback?',
+    event: 'VertX Conference 2024',
+    location: 'Newcastle, UK',
+    date: 'July 2024',
+    description:
+      'A talk on the importance of feedback in the workplace and how to give and receive it effectively.',
+  },
+]
+---
+
+<div class="section-container">
+  <h2 class="section-title">
+    Speaking & Thought Leadership
+  </h2>
+
+  <div class="mb-12">
+    <p class="text-lg text-gray-700">
+      As a technical leader with extensive experience, I
+      regularly share insights on web development, team
+      leadership, and technology strategy. Here are some of
+      my recent speaking engagements:
+    </p>
+  </div>
+
+  <div class="space-y-8">
+    {
+      cards.map((card, index) => (
+        <Card
+          key={index}
+          className="overflow-hidden border-0 shadow-md card-hover"
+        >
+          <CardContent className="p-0">
+            <div class="flex flex-col md:flex-row">
+              <div class="flex items-center justify-center bg-orange-100 p-6 md:w-1/5">
+                {card.type === 'talk' ? (
+                  <Mic
+                    size={36}
+                    className="text-orange-400"
+                  />
+                ) : (
+                  <Newspaper
+                    size={36}
+                    className="text-orange-400"
+                  />
+                )}
+              </div>
+              <div class="p-6 md:w-4/5">
+                <h3 class="mb-2 text-xl font-semibold">
+                  {card.title}
+                </h3>
+                <div class="mb-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+                  {card.type === 'talk' ? (
+                    <>
+                      <span>{card.event}</span>
+                      <span>{card.location}</span>
+                    </>
+                  ) : (
+                    <>
+                      <a
+                        href={card.link}
+                        target="_blank"
+                        class="text-primary flex items-center gap-1 hover:underline"
+                      >
+                        Read the article
+                        <ExternalLink
+                          size={16}
+                          className="text-primary"
+                        />
+                      </a>
+                    </>
+                  )}
+                  <span>{card.date}</span>
+                </div>
+                <p class="text-gray-700">
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))
+    }
+  </div>
+
+  <div class="mt-12 text-center">
+    <p class="text-gray-600 italic">
+      Interested in having me speak at your event or company
+      on technical leadership, web development, or team
+      building? Please reach out through the contact form
+      below.
+    </p>
+  </div>
+</div>

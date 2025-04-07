@@ -1,9 +1,14 @@
-import { defineConfig } from 'astro/config';
-
-import vercel from "@astrojs/vercel/serverless";
+// @ts-check
+import { defineConfig } from 'astro/config'
+import react from '@astrojs/react'
+import node from '@astrojs/node'
+import partytown from '@astrojs/partytown'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-  adapter: vercel()
-});
+  integrations: [react(), partytown()],
+  output: 'static',
+  adapter: node({ mode: 'standalone' }),
+  vite: { plugins: [tailwindcss()] },
+})
