@@ -66,10 +66,11 @@ export default function Projects() {
         'TailwindCSS',
         'OpenSource',
       ],
-      link: 'https://pixel-perfection.vercel.app/',
+      link: 'https://pixel-perfection.keeghan.io/',
       status: 'In Progress',
       type: 'WebApp',
       builtDate: '01/08/2023',
+      featured: true,
     },
     {
       title: 'proddr',
