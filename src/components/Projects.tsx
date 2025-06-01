@@ -1,15 +1,10 @@
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardFooter,
 } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { ArrowRight, Filter, Star } from 'lucide-react'
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from '@/components/ui/toggle-group'
-import { Button } from '@/components/ui/button'
 import {
   Select,
   SelectContent,
@@ -17,6 +12,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from '@/components/ui/toggle-group'
+import { ArrowRight, Filter, Star } from 'lucide-react'
 import { useState } from 'react'
 
 type ProjectStatus =
@@ -198,7 +198,7 @@ export default function Projects() {
         'A web application for monitoring Google PageSpeed Insights scores across multiple websites with automated tracking, historical data visualization, and flexible filtering.',
       tags: ['Astro', 'React', 'Automation', 'Drizzle'],
       link: 'https://page-mon.com/',
-      status: 'Production',
+      status: 'In Progress',
       type: 'WebApp',
       builtDate: '01/01/2025',
     },
@@ -249,9 +249,10 @@ export default function Projects() {
         'Human Side of Code (HuSOC) is a platform that bridges the gap between technical expertise and human-centred development in the tech industry. We challenge the stereotype of the "socially awkward developer" and empower tech professionals to excel in both coding and interpersonal skills.',
       tags: ['Astro', 'React', 'Education', 'OpenSource'],
       link: 'https://www.humansideofcode.org/',
-      status: 'In Progress',
+      status: 'Production',
       type: 'WebApp',
       builtDate: '15/08/2024',
+      featured: true,
     },
   ]
 
