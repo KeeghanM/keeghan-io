@@ -17,8 +17,28 @@ interface BlogPost {
   description: string
   link: string
 }
+
 type Card = Talk | BlogPost
 const cards: Card[] = [
+  {
+    type: 'talk',
+    title: 'When Product Development Meets Reality',
+    event: 'ProductTank Newcastle July 2025',
+    location: 'Newcastle, UK',
+    date: 'July 2025',
+    description:
+      'A talk on the challenges of product development in the real world, including dealing with uncertainty, managing stakeholder expectations, and adapting to changing requirements. Practical strategies for adapting frameworks to fit your team and your product.',
+  },
+  {
+    type: 'talk',
+    title:
+      "The Final Mile: What's hard about actually delivering",
+    event: 'VertX Conference 2025',
+    location: 'Newcastle, UK',
+    date: 'July 2025',
+    description:
+      'Discussion around the challenges of delivering software projects on time and within scope, and strategies to overcome these hurdles.',
+  },
   {
     type: 'talk',
     title: 'What Makes Good Feedback?',

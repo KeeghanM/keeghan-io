@@ -198,7 +198,7 @@ export default function Projects() {
         'A web application for monitoring Google PageSpeed Insights scores across multiple websites with automated tracking, historical data visualization, and flexible filtering.',
       tags: ['Astro', 'React', 'Automation', 'Drizzle'],
       link: 'https://page-mon.com/',
-      status: 'In Progress',
+      status: 'Production',
       type: 'WebApp',
       builtDate: '01/01/2025',
     },
@@ -208,14 +208,14 @@ export default function Projects() {
         'A streamlined solution for automating Google My Business profile management with features for monitoring, bulk management, review response, and smart notifications.',
       tags: ['Astro', 'React', 'Drizzle', 'Automation'],
       link: 'https://gmbmanager.io/',
-      status: 'In Progress',
+      status: 'Deprecated',
       type: 'WebApp',
       builtDate: '01/02/2025',
     },
     {
       title: 'SpotSpot',
       description:
-        'A web application that helps track, organize, and rate favorite places. Like Letterboxd but for places to go and things to do!',
+        'A web & mobile (PWA) application that helps track, organize, and rate favorite places. Like Letterboxd but for places to go and things to do!',
       tags: ['Astro', 'React', 'GoogleMaps', 'Drizzle'],
       link: 'https://spotspot.keeghan.io',
       status: 'Production',
@@ -226,8 +226,8 @@ export default function Projects() {
     {
       title: 'Keeghan.io',
       description:
-        'My personal portfolio website, built with Astro + React using Shadcn. It showcases my projects, skills, and experience.',
-      tags: ['Astro', 'React', 'Shadcn'],
+        'My personal portfolio website, built with Astro + React using ShadCN. It showcases my projects, skills, and experience.',
+      tags: ['Astro', 'React', 'ShadCN'],
       link: 'https://keeghan.io',
       status: 'Production',
       type: 'WebApp',
@@ -253,6 +253,16 @@ export default function Projects() {
       type: 'WebApp',
       builtDate: '15/08/2024',
       featured: true,
+    },
+    {
+      title: 'ArcAide',
+      description:
+        'rcAide helps Dungeon Masters create compelling storylines, manage campaigns, and organize game content through an intuitive arc-based narrative structure.',
+      tags: ['Astro', 'React', 'TailwindCSS', 'Drizzle', 'OpenSource', 'Payments', 'Authentication','AI'],
+      link: 'https://arcaide.keeghan.io',
+      status: 'In Progress',
+      type: 'WebApp',
+      builtDate: '01/09/2025',
     },
   ]
 
